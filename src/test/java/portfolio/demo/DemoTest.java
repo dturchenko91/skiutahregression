@@ -26,12 +26,6 @@ public class DemoTest
     private String dependencyInjectionTest;
 
     @Test
-    public void shouldDisplayCorrectBrowserProperty()
-    {
-
-    }
-
-    @Test
     public void shouldDisplayDependencyInjectionTestString()
     {
         assertThat(dependencyInjectionTest, is("injected"));
