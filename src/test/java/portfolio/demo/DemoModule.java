@@ -1,7 +1,7 @@
-package portfolio;
+package portfolio.demo;
 
 import com.google.inject.AbstractModule;
-import portfolio.base.BaseModule;
+import portfolio.base.base.BaseModule;
 
 /**
  * Created by Dan on 6/26/2017.

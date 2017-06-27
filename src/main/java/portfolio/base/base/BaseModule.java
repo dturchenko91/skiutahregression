@@ -1,7 +1,11 @@
-package portfolio.base;
+package portfolio.base.base;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
 
 import javax.inject.Named;
 
@@ -10,9 +14,9 @@ import javax.inject.Named;
  */
 public class BaseModule extends AbstractModule {
 
-    //public BaseModule(){}
-
-    protected void configure() {
+    @Override
+    protected void configure()
+    {
 
     }
 
@@ -22,4 +26,6 @@ public class BaseModule extends AbstractModule {
     {
         return "injected";
     }
+
+
 }

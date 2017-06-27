@@ -1,13 +1,9 @@
-package portfolio;
+package portfolio.demo;
 
-import com.google.inject.AbstractModule;
-import com.google.inject.Provides;
-import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import portfolio.base.BaseModule;
-import portfolio.base.PortfolioJunit4Runner;
-import portfolio.base.WebDriverRule;
+import portfolio.base.base.PortfolioJunit4Runner;
+import portfolio.base.base.WebDriverRule;
 
 import javax.inject.Inject;
 import javax.inject.Named;
