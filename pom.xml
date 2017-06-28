@@ -22,7 +22,7 @@
         <version>2.5</version>
         <configuration>
           <systemPropertyVariables>
-            <browsers>chrome</browsers>
+            <browsers>phantomjs</browsers>
             <basepath>www.skiutah.com</basepath>
             <buildDirectory>${project.build.directory}</buildDirectory>
             [...]
