@@ -101,5 +101,18 @@ public class TripPlannerResults extends PageBase
                     .pollingEvery(100, TimeUnit.MILLISECONDS)
                     .until(invisibilityOf(closeButton));
         }
+
+        public boolean hasAmenity(String amenity)
+        {
+            for(String availableAmenity: getAmenities())
+            {
+                if(availableAmenity.equals(amenity))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }
