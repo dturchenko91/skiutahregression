@@ -8,6 +8,7 @@ import javax.inject.Inject;
 public class UrlBuilder {
 
     private String basePath;
+    private String appendedPath = "/";
 
     @Inject
     public UrlBuilder()
@@ -17,18 +18,18 @@ public class UrlBuilder {
 
     public UrlBuilder appendPath(String path)
     {
-        this.basePath = basePath + "/" + path;
+        this.appendedPath = appendedPath + path;
         return this;
     }
 
     public UrlBuilder replacePath(String path)
     {
-
-        return new UrlBuilder().appendPath(path);
+        appendedPath = "/" + path;
+        return this;
     }
 
     public String build()
     {
-        return basePath + "/";
+        return basePath + appendedPath;
     }
 }
