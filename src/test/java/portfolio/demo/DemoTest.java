@@ -3,7 +3,6 @@ package portfolio.demo;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import portfolio.base.base.PortfolioJunit4Runner;
-import portfolio.base.base.WebDriverRule;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -18,8 +17,6 @@ import static org.hamcrest.core.Is.is;
 @PortfolioJunit4Runner.GuiceModules(DemoModule.class)
 public class DemoTest
 {
-    @Inject
-    public WebDriverRule webDriverRule;
 
     @Inject
     @Named("dependencyInjectionTest")

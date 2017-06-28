@@ -23,11 +23,11 @@ public class HomePage {
 
         new WebDriverWait(driver, 5)
                 .pollingEvery(100, TimeUnit.MILLISECONDS)
-                .until(textToBePresentInElementLocated(By.cssSelector("h1.map-Container-menuTitle>span"), "Explore Utah"));
+                .until(textToBePresentInElementLocated(By.cssSelector("h1.map-Container-menuTitle"), "EXPLORE UTAH"));
     }
 
     public boolean isDisplayed()
     {
-        return driver.findElement(By.cssSelector("h1.map-Container-menuTitle>span")).getText().equals("Explore Utah");
+        return driver.findElement(By.cssSelector("h1.map-Container-menuTitle>span")).getText().equals("EXPLORE UTAH");
     }
 }

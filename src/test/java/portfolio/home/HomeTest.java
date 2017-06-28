@@ -3,13 +3,16 @@ package portfolio.home;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import portfolio.base.base.DriverRule;
 import portfolio.base.base.PortfolioJunit4Runner;
-import portfolio.base.base.WebDriverRule;
 import portfolio.base.home.HomeNavigator;
 import portfolio.base.home.HomePage;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertTrue;
 
 /**
@@ -20,10 +23,15 @@ import static org.junit.Assert.assertTrue;
 public class HomeTest {
     @Inject
     @Rule
-    public WebDriverRule webDriverRule;
+    public DriverRule driverRule;
 
     @Inject
     private HomeNavigator homeNavigator;
+
+    @Inject
+    @Named("dependencyInjectionTest")
+    private String dependencyInjectionTest;
+
 
     @Test
     public void shouldDisplayHomePage()
@@ -31,5 +39,17 @@ public class HomeTest {
         HomePage homePage = homeNavigator.getHomePage();
 
         assertTrue(homePage.isDisplayed());
+    }
+
+    @Test
+    public void shouldNavToOtherPagesFromHome()
+    {
+        
+    }
+
+    @Test
+    public void shouldInjectObjectsFromNestingModules()
+    {
+        assertThat(dependencyInjectionTest, is ("injected"));
     }
 }
