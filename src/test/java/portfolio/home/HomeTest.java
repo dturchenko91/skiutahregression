@@ -3,10 +3,9 @@ package portfolio.home;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import portfolio.base.base.DriverRule;
-import portfolio.base.base.PortfolioJunit4Runner;
-import portfolio.base.home.HomeNavigator;
-import portfolio.base.home.HomePage;
+import portfolio.common.DriverRule;
+import portfolio.common.PortfolioJunit4Runner;
+import portfolio.resorts.ResortsAndSnowPage;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -44,7 +43,13 @@ public class HomeTest {
     @Test
     public void shouldNavToOtherPagesFromHome()
     {
-        
+        HomePage homePage = homeNavigator.getHomePage();
+
+        ResortsAndSnowPage resortsAndSnowPage = homePage.getResortsAndSnowPage();
+
+        homePage = resortsAndSnowPage.getHomePage();
+
+        assertTrue(homePage.isDisplayed());
     }
 
     @Test

@@ -1,7 +1,7 @@
 package portfolio.home;
 
 import com.google.inject.AbstractModule;
-import portfolio.base.base.DriverModule;
+import portfolio.common.DriverModule;
 
 /**
  * Created by Dan on 6/26/2017.

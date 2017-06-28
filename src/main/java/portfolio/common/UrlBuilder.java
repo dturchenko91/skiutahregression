@@ -1,7 +1,6 @@
-package portfolio.base.base;
+package portfolio.common;
 
 import javax.inject.Inject;
-import java.net.URL;
 
 /**
  * Created by Dan on 6/26/2017.

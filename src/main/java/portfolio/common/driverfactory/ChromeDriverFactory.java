@@ -1,4 +1,4 @@
-package portfolio.base.base.driverfactory;
+package portfolio.common.driverfactory;
 
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;

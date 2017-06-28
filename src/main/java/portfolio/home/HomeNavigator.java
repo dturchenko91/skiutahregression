@@ -1,7 +1,7 @@
-package portfolio.base.home;
+package portfolio.home;
 
 import org.openqa.selenium.WebDriver;
-import portfolio.base.base.UrlBuilder;
+import portfolio.common.UrlBuilder;
 
 import javax.inject.Inject;
 import javax.inject.Provider;

@@ -2,7 +2,7 @@ package portfolio.demo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import portfolio.base.base.PortfolioJunit4Runner;
+import portfolio.common.PortfolioJunit4Runner;
 
 import javax.inject.Inject;
 import javax.inject.Named;

@@ -1,12 +1,10 @@
-package portfolio.base.base;
+package portfolio.common;
 
 import com.google.inject.Inject;
-import com.google.inject.Provides;
 import org.junit.rules.TestRule;
 import org.junit.runner.Description;
 import org.junit.runners.model.Statement;
-import org.openqa.selenium.WebDriver;
-import portfolio.base.base.driverfactory.DriverFactory;
+import portfolio.common.driverfactory.DriverFactory;
 
 /**
  * Created by Dan on 6/27/2017.
@@ -20,8 +18,13 @@ public class DriverRule implements TestRule {
             @Override
             public void evaluate() throws Throwable
             {
-                base.evaluate();
-                factory.quit();
+                try
+                {
+                    base.evaluate();
+                }
+                finally {
+                    factory.quit();
+                }
             }
         };
     }

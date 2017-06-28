@@ -1,4 +1,4 @@
-package portfolio.base.base;
+package portfolio.common;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Guice;

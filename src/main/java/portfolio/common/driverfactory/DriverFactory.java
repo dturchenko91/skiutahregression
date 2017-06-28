@@ -1,7 +1,6 @@
-package portfolio.base.base.driverfactory;
+package portfolio.common.driverfactory;
 
 import com.google.inject.Provides;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 
 /**

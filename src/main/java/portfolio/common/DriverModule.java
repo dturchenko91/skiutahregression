@@ -1,20 +1,15 @@
-package portfolio.base.base;
+package portfolio.common;
 
-import com.google.common.io.Closeables;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 import com.google.inject.Scopes;
 import org.openqa.selenium.WebDriver;
-import portfolio.base.base.driverfactory.ChromeDriverFactory;
-import portfolio.base.base.driverfactory.DriverFactory;
-import portfolio.base.base.driverfactory.FirefoxDriverFactory;
-import portfolio.base.base.driverfactory.PhantomJsDriverFactory;
+import portfolio.common.driverfactory.ChromeDriverFactory;
+import portfolio.common.driverfactory.DriverFactory;
+import portfolio.common.driverfactory.FirefoxDriverFactory;
+import portfolio.common.driverfactory.PhantomJsDriverFactory;
 
-import javax.inject.Inject;
 import javax.inject.Named;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Properties;
 
 /**
  * Created by Dan on 6/26/2017.

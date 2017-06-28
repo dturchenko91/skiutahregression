@@ -1,4 +1,4 @@
-package portfolio.base.base.driverfactory;
+package portfolio.common.driverfactory;
 
 import io.github.bonigarcia.wdm.FirefoxDriverManager;
 import org.openqa.selenium.firefox.FirefoxDriver;
