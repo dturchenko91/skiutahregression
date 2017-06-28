@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03b8425b-b232-47f2-8455-a186487ca958" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/portfolio/tripplanner/TripModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/portfolio/tripplanner/TripPlannerResults.java" afterPath="$PROJECT_DIR$/src/main/java/portfolio/tripplanner/TripPlannerResults.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/portfolio/tripplanner/TripPlanModule.java" afterPath="$PROJECT_DIR$/src/test/java/portfolio/tripplanner/TripPlanModule.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/portfolio/tripplanner/TripPlanTest.java" afterPath="$PROJECT_DIR$/src/test/java/portfolio/tripplanner/TripPlanTest.java" />
     </list>
@@ -19,11 +18,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TripPlanTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TripPlanTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/portfolio/tripplanner/TripPlanTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="48" column="39" lean-forward="false" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
+            <state relative-caret-position="249">
+              <caret line="70" column="65" lean-forward="false" selection-start-line="70" selection-start-column="65" selection-end-line="70" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,8 +45,8 @@
       <file leaf-file-name="TripPlannerResults.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/portfolio/tripplanner/TripPlannerResults.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="631">
-              <caret line="114" column="25" lean-forward="false" selection-start-line="114" selection-start-column="25" selection-end-line="114" selection-end-column="25" />
+            <state relative-caret-position="478">
+              <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2316#2317#0" expanded="true" />
@@ -86,8 +85,8 @@
       <file leaf-file-name="TripPlanModule.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/portfolio/tripplanner/TripPlanModule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="629">
+              <caret line="37" column="40" lean-forward="false" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#364#365#0" expanded="true" />
@@ -122,11 +121,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+            <state relative-caret-position="340">
+              <caret line="26" column="31" lean-forward="false" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -204,11 +203,11 @@
         <option value="$PROJECT_DIR$/src/main/java/portfolio/tripplanner/TripPlannerNavigator.java" />
         <option value="$PROJECT_DIR$/src/main/java/portfolio/tripplanner/TripPlannerMain.java" />
         <option value="$PROJECT_DIR$/src/main/java/portfolio/common/UrlBuilder.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/portfolio/tripplanner/TripModel.java" />
-        <option value="$PROJECT_DIR$/src/test/java/portfolio/tripplanner/TripPlanModule.java" />
         <option value="$PROJECT_DIR$/src/main/java/portfolio/tripplanner/TripPlannerResults.java" />
+        <option value="$PROJECT_DIR$/src/test/java/portfolio/tripplanner/TripPlanModule.java" />
         <option value="$PROJECT_DIR$/src/test/java/portfolio/tripplanner/TripPlanTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -448,7 +447,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TripPlanTest.shouldRecommendResortsWithAppropriateAmenitiesForFamilies">
+  <component name="RunManager" selected="JUnit.TripPlanTest">
     <configuration default="false" name="TripPlanTest.shouldRemoveResortCardFromRecommendationsWhenClicked" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -488,6 +487,58 @@
       <option name="PACKAGE_NAME" value="portfolio.tripplanner" />
       <option name="MAIN_CLASS_NAME" value="portfolio.tripplanner.TripPlanTest" />
       <option name="METHOD_NAME" value="shouldRecommendResortsWithAppropriateAmenitiesForFamilies" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="TripPlanTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="portfolio.tripplanner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="skiutahregression" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="portfolio.tripplanner" />
+      <option name="MAIN_CLASS_NAME" value="portfolio.tripplanner.TripPlanTest" />
+      <option name="METHOD_NAME" value="shouldRecommendResortsWithAppropriateAmenitiesForFamilies" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="TripPlanTest.shouldRecommendResortsWithAppropriateAmenitiesForPowderhounds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="portfolio.tripplanner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="skiutahregression" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="portfolio.tripplanner" />
+      <option name="MAIN_CLASS_NAME" value="portfolio.tripplanner.TripPlanTest" />
+      <option name="METHOD_NAME" value="shouldRecommendResortsWithAppropriateAmenitiesForPowderhounds" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -606,14 +657,18 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <list size="2">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="JUnit.TripPlanTest.shouldRemoveResortCardFromRecommendationsWhenClicked" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.TripPlanTest.shouldRecommendResortsWithAppropriateAmenitiesForFamilies" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TripPlanTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TripPlanTest.shouldRecommendResortsWithAppropriateAmenitiesForPowderhounds" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TripPlanTest.shouldRecommendResortsWithAppropriateAmenitiesForFamilies" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TripPlanTest.shouldRemoveResortCardFromRecommendationsWhenClicked" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TripPlanTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TripPlanTest.shouldRecommendResortsWithAppropriateAmenitiesForPowderhounds" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TripPlanTest.shouldRecommendResortsWithAppropriateAmenitiesForFamilies" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TripPlanTest.shouldRemoveResortCardFromRecommendationsWhenClicked" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
@@ -637,20 +692,20 @@
     <servers />
   </component>
   <component name="TestHistory">
+    <history-entry file="TripPlanTest - 2017.06.28 at 16h 12m 46s.xml">
+      <configuration name="TripPlanTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TripPlanTest - 2017.06.28 at 16h 24m 59s.xml">
+      <configuration name="TripPlanTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TripPlanTest - 2017.06.28 at 16h 31m 58s.xml">
+      <configuration name="TripPlanTest" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="TripPlanTest_shouldRecommendResortsWithAppropriateAmenitiesForFamilies - 2017.06.28 at 15h 46m 42s.xml">
       <configuration name="TripPlanTest.shouldRecommendResortsWithAppropriateAmenitiesForFamilies" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TripPlanTest_shouldRemoveResortCardFromRecommendationsWhenClicked - 2017.06.28 at 14h 45m 44s.xml">
-      <configuration name="TripPlanTest.shouldRemoveResortCardFromRecommendationsWhenClicked" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TripPlanTest_shouldRemoveResortCardFromRecommendationsWhenClicked - 2017.06.28 at 14h 46m 18s.xml">
-      <configuration name="TripPlanTest.shouldRemoveResortCardFromRecommendationsWhenClicked" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TripPlanTest_shouldRemoveResortCardFromRecommendationsWhenClicked - 2017.06.28 at 14h 49m 09s.xml">
-      <configuration name="TripPlanTest.shouldRemoveResortCardFromRecommendationsWhenClicked" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TripPlanTest_shouldRemoveResortCardFromRecommendationsWhenClicked - 2017.06.28 at 14h 51m 49s.xml">
-      <configuration name="TripPlanTest.shouldRemoveResortCardFromRecommendationsWhenClicked" configurationId="JUnit" />
+    <history-entry file="TripPlanTest_shouldRecommendResortsWithAppropriateAmenitiesForPowderhounds - 2017.06.28 at 16h 13m 44s.xml">
+      <configuration name="TripPlanTest.shouldRecommendResortsWithAppropriateAmenitiesForPowderhounds" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TripPlanTest_shouldRemoveResortCardFromRecommendationsWhenClicked - 2017.06.28 at 14h 54m 46s.xml">
       <configuration name="TripPlanTest.shouldRemoveResortCardFromRecommendationsWhenClicked" configurationId="JUnit" />
@@ -670,6 +725,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -678,7 +734,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32833022" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32833022" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17447917" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
@@ -724,12 +780,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/portfolio/tripplanner/TripPlanTest.java</url>
-          <line>43</line>
+          <line>46</line>
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/portfolio/tripplanner/TripPlanTest.java</url>
+          <line>77</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="7" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -986,14 +1048,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/portfolio/tripplanner/TripModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1019,8 +1073,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/portfolio/tripplanner/TripPlanModule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="629">
+          <caret line="37" column="40" lean-forward="false" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#364#365#0" expanded="true" />
@@ -1031,8 +1085,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/portfolio/tripplanner/TripPlannerResults.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="114" column="25" lean-forward="false" selection-start-line="114" selection-start-column="25" selection-end-line="114" selection-end-column="25" />
+        <state relative-caret-position="478">
+          <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2316#2317#0" expanded="true" />
@@ -1047,11 +1101,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/portfolio/tripplanner/TripPlanTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="48" column="39" lean-forward="false" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
+        <state relative-caret-position="249">
+          <caret line="70" column="65" lean-forward="false" selection-start-line="70" selection-start-column="65" selection-end-line="70" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="26" column="31" lean-forward="false" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>

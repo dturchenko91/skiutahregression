@@ -33,6 +33,9 @@ public class TripPlanTest {
     @Named("FamilyTripData")
     private TripModel familyTripData;
 
+    @Inject
+    @Named("PowderhoundData")
+    private TripModel powderhoundData;
     @Test
     public void shouldRemoveResortCardFromRecommendationsWhenClicked()
     {
@@ -60,4 +63,22 @@ public class TripPlanTest {
             }
         }
     }
+
+    @Test
+    public void shouldRecommendResortsWithAppropriateAmenitiesForPowderhounds()
+    {
+        TripPlannerMain main = navigator.getTripPlanner();
+        TripPlannerResults planner = main.getPowderhoundResults();
+
+        List<TripPlannerResults.ResortCard> resorts = planner.getResorts();
+        for(TripPlannerResults.ResortCard resort: resorts)
+        {
+            for(String amenity: powderhoundData.getAmenities())
+            {
+                assertTrue(resort.hasAmenity(amenity));
+            }
+        }
+    }
+
+
 }

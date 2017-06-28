@@ -28,4 +28,13 @@ public class TripPlanModule extends AbstractModule {
 
         return new TripModel(amenities);
     }
+
+    @Provides
+    @Named("PowderhoundData")
+    public TripModel powderhoundData()
+    {
+        List<String> amenities = new ArrayList<>();
+        amenities.add("On Mountain Bar");
+        return new TripModel(amenities);
+    }
 }
