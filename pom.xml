@@ -24,7 +24,6 @@
         <configuration>
           <parallel>classes</parallel>
           <threadCount>3</threadCount>
-          <parallelTestsTimeoutForcedInSeconds>60</parallelTestsTimeoutForcedInSeconds>
           <systemPropertyVariables>
             <browsers>phantomjs</browsers>
             <basepath>www.skiutah.com</basepath>
