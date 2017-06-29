@@ -36,6 +36,10 @@ public class TripPlanTest {
     @Inject
     @Named("PowderhoundData")
     private TripModel powderhoundData;
+
+    @Inject
+    @Named("SkierOnlyData")
+    private TripModel skierOnlyData;
     @Test
     public void shouldRemoveResortCardFromRecommendationsWhenClicked()
     {
@@ -54,14 +58,7 @@ public class TripPlanTest {
         TripPlannerMain main = navigator.getTripPlanner();
         TripPlannerResults planner = main.getFamilyResults();
 
-        List<TripPlannerResults.ResortCard> resorts = planner.getResorts();
-        for(TripPlannerResults.ResortCard resort: resorts)
-        {
-            for(String amenity: familyTripData.getAmenities())
-            {
-                assertTrue(resort.hasAmenity(amenity));
-            }
-        }
+        assertTrue(planner.atLeastOneResortWithDesiredAmenities(familyTripData));
     }
 
     @Test
@@ -70,14 +67,33 @@ public class TripPlanTest {
         TripPlannerMain main = navigator.getTripPlanner();
         TripPlannerResults planner = main.getPowderhoundResults();
 
-        List<TripPlannerResults.ResortCard> resorts = planner.getResorts();
-        for(TripPlannerResults.ResortCard resort: resorts)
+        assertTrue(planner.atLeastOneResortWithDesiredAmenities(powderhoundData));
+    }
+
+    @Test
+    public void shouldRecommendResortsByCustomSearch()
+    {
+        TripPlannerMain main = navigator.getTripPlanner();
+        TripCustomizer customizer = main.createCustomTrip();
+
+        TripPlannerResults planner = customizer.setTripCriteria(skierOnlyData)
+                .submitSearch();
+
+        boolean correctCardDisplayed = false;
+        while(!correctCardDisplayed)
         {
-            for(String amenity: powderhoundData.getAmenities())
+            TripPlannerResults.ResortCard resort = planner.getResorts().get(0);
+            if(resort.hasAmenity(skierOnlyData.getAmenities().get(0)))
             {
-                assertTrue(resort.hasAmenity(amenity));
+                correctCardDisplayed = true;
+            }
+            else
+            {
+                resort.close();
             }
         }
+
+        assertTrue(planner.atLeastOneResortWithDesiredAmenities(skierOnlyData));
     }
 
 

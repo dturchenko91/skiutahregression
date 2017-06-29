@@ -21,9 +21,10 @@ public class TripPlanModule extends AbstractModule {
     @Named("FamilyTripData")
     public TripModel familyTripModel()
     {
-        List<String> amenities = new ArrayList<>();
-        amenities.add("Ski School");
-        amenities.add("Equipment Rental");
+        List<ResortAmenity> amenities = new ArrayList<>();
+        amenities.add(ResortAmenity.SKISCHOOL);
+        amenities.add(ResortAmenity.EQUIPMENTRENTAL);
+        amenities.add(ResortAmenity.DAYCARE);
 
         return new TripModel(amenities);
     }
@@ -32,8 +33,17 @@ public class TripPlanModule extends AbstractModule {
     @Named("PowderhoundData")
     public TripModel powderhoundData()
     {
-        List<String> amenities = new ArrayList<>();
-        amenities.add("On Mountain Bar");
+        List<ResortAmenity> amenities = new ArrayList<>();
+        amenities.add(ResortAmenity.ONMOUNTAINBAR);
+        return new TripModel(amenities);
+    }
+
+    @Provides
+    @Named("SkierOnlyData")
+    public TripModel skierOnlyData()
+    {
+        List<ResortAmenity> amenities = new ArrayList<>();
+        amenities.add(ResortAmenity.SKIERSONLY);
         return new TripModel(amenities);
     }
 }

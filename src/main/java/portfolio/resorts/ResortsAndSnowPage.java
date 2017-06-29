@@ -2,9 +2,8 @@ package portfolio.resorts;
 
 import com.google.inject.Inject;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import portfolio.common.BasicPageFunctions;
 import portfolio.common.PageBase;
-import portfolio.home.HomePage;
 
 import javax.inject.Provider;
 
@@ -14,8 +13,8 @@ import javax.inject.Provider;
 public class ResortsAndSnowPage extends PageBase {
 
     @Inject
-    public ResortsAndSnowPage(WebDriver driver, Provider<HomePage> homepage, Provider<ResortsAndSnowPage> resortsAndSnowPage)
+    public ResortsAndSnowPage(Provider<BasicPageFunctions> basicFunctions)
     {
-        super(driver, homepage, resortsAndSnowPage, By.cssSelector("div#snow-report-summary-sundance"));
+        super(basicFunctions, By.cssSelector("div#snow-report-summary-sundance"));
     }
 }

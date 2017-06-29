@@ -1,12 +1,10 @@
 package portfolio.tripplanner;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import portfolio.common.BasicPageFunctions;
 import portfolio.common.PageBase;
-import portfolio.home.HomePage;
-import portfolio.resorts.ResortsAndSnowPage;
 
 import javax.inject.Inject;
 import javax.inject.Provider;
@@ -22,9 +20,9 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.invisibilityOf;
 public class TripPlannerResults extends PageBase
 {
     @Inject
-    public TripPlannerResults(WebDriver driver, Provider<HomePage> homePage, Provider<ResortsAndSnowPage> resortsAndSnowPage)
+    public TripPlannerResults(Provider<BasicPageFunctions> basicFunctions)
     {
-        super(driver, homePage, resortsAndSnowPage, By.cssSelector("article.resorts_card"));
+        super(basicFunctions, By.cssSelector("article.resorts_card"));
     }
 
     public List<ResortCard> getResorts()
@@ -51,6 +49,24 @@ public class TripPlannerResults extends PageBase
             {
                 return true;
             }
+        }
+        return false;
+    }
+
+    public boolean atLeastOneResortWithDesiredAmenities(TripModel data)
+    {
+        for(ResortCard resort: getResorts())
+        {
+            boolean hasAllAmenities = true;
+            for(ResortAmenity amenity: data.getAmenities())
+            {
+                if(!resort.hasAmenity(amenity))
+                {
+                    hasAllAmenities = false;
+                }
+            }
+            if(hasAllAmenities)
+                return true;
         }
         return false;
     }
@@ -102,11 +118,11 @@ public class TripPlannerResults extends PageBase
                     .until(invisibilityOf(closeButton));
         }
 
-        public boolean hasAmenity(String amenity)
+        public boolean hasAmenity(ResortAmenity amenity)
         {
             for(String availableAmenity: getAmenities())
             {
-                if(availableAmenity.equals(amenity))
+                if(availableAmenity.equals(amenity.getResultsName()))
                 {
                     return true;
                 }

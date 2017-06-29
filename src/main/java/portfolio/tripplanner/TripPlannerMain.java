@@ -1,10 +1,9 @@
 package portfolio.tripplanner;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
+import portfolio.common.BasicPageFunctions;
 import portfolio.common.PageBase;
-import portfolio.home.HomePage;
-import portfolio.resorts.ResortsAndSnowPage;
 
 import javax.inject.Inject;
 import javax.inject.Provider;
@@ -15,12 +14,15 @@ import javax.inject.Provider;
 public class TripPlannerMain extends PageBase
 {
     private Provider<TripPlannerResults> results;
+    private Provider<TripCustomizer> customizer;
+
     @Inject
-    public TripPlannerMain(WebDriver driver, Provider<HomePage> homePage, Provider<ResortsAndSnowPage> resortsAndSnowPage, Provider<TripPlannerResults> results)
+    public TripPlannerMain(Provider<BasicPageFunctions> basicFunctions, Provider<TripPlannerResults> results, Provider<TripCustomizer> customizer)
     {
-        super(driver, homePage, resortsAndSnowPage, By.cssSelector("a.adventure-card"));
+        super(basicFunctions, By.cssSelector("a[href='./customize-trip']"));
 
         this.results = results;
+        this.customizer = customizer;
     }
 
     public TripPlannerResults getFamilyResults()
@@ -43,6 +45,19 @@ public class TripPlannerMain extends PageBase
 
         return results.get();
     }
+
+    public TripCustomizer createCustomTrip()
+    {
+        //driver.findElement(By.cssSelector("a[href='./customize-trip']")).click();
+
+        Actions builder = new Actions(driver);
+
+        builder.click(driver.findElement(By.cssSelector("a[href='./customize-trip']"))).click(driver.findElement(By.cssSelector("a[href='./customize-trip']"))).perform();
+
+        return customizer.get();
+    }
+
+
 
 
 }

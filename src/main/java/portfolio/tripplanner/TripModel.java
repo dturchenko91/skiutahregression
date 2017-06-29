@@ -7,14 +7,14 @@ import java.util.List;
  */
 public class TripModel
 {
-    private List<String> amenities;
+    private List<ResortAmenity> amenities;
 
-    public TripModel(List<String> amenities)
+    public TripModel(List<ResortAmenity> amenities)
     {
         this.amenities = amenities;
     }
 
-    public List<String> getAmenities()
+    public List<ResortAmenity> getAmenities()
     {
         return this.amenities;
     }
