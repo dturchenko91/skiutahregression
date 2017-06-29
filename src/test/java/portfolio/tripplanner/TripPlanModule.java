@@ -24,7 +24,6 @@ public class TripPlanModule extends AbstractModule {
         List<String> amenities = new ArrayList<>();
         amenities.add("Ski School");
         amenities.add("Equipment Rental");
-        amenities.add("Day Care");
 
         return new TripModel(amenities);
     }
