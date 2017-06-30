@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import portfolio.common.DriverRule;
 import portfolio.common.PortfolioJunit4Runner;
+import portfolio.common.RetryDriverChain;
 import portfolio.resorts.ResortsAndSnowPage;
 
 import javax.inject.Inject;
@@ -22,7 +23,7 @@ import static org.junit.Assert.assertTrue;
 public class HomeTest {
     @Inject
     @Rule
-    public DriverRule driverRule;
+    public RetryDriverChain retryDriverChain;
 
     @Inject
     private HomeNavigator homeNavigator;

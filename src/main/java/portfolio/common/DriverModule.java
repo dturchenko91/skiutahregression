@@ -19,6 +19,11 @@ public class DriverModule extends AbstractModule {
     @Override
     protected void configure()
     {
+        //this is what defines what kind of webdriver to create
+        //the driver factories are a wrapper for bonigarcia's driver manager project
+        //the driver manager that exists within the driver factory automatically downloads and installs driver binaries before tests are run
+
+        //the bound webdriverfactory is then injected into the method to provide the webdriver itself
         switch (System.getProperty("browsers"))
         {
             default:
