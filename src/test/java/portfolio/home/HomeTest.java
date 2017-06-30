@@ -37,7 +37,7 @@ public class HomeTest {
     {
         HomePage homePage = homeNavigator.getHomePage();
 
-        assertTrue(homePage.isDisplayed());
+        assertTrue(homePage.basicPageFunctions.isDisplayed());
     }
 
     @Test
@@ -45,11 +45,11 @@ public class HomeTest {
     {
         HomePage homePage = homeNavigator.getHomePage();
 
-        ResortsAndSnowPage resortsAndSnowPage = homePage.getResortsAndSnowPage();
+        ResortsAndSnowPage resortsAndSnowPage = homePage.basicPageFunctions.getResortsAndSnowPage();
 
-        homePage = resortsAndSnowPage.getHomePage();
+        homePage = resortsAndSnowPage.basicPageFunctions.getHomePage();
 
-        assertTrue(homePage.isDisplayed());
+        assertTrue(homePage.basicPageFunctions.isDisplayed());
     }
 
     @Test
