@@ -21,6 +21,7 @@ public class DriverRule implements TestRule {
             {
                 try
                 {
+                    factory.getDriver();
                     base.evaluate();
                 }
                 finally {

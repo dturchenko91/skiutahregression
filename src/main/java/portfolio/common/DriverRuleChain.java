@@ -16,8 +16,8 @@ public class DriverRuleChain implements TestRule {
     @Inject
     public DriverRuleChain(DriverRule driverRule, RetryRule retryRule, ScreenshotRule screenshotRule)
     {
-        chain = RuleChain.outerRule(driverRule)
-                .around(retryRule)
+        chain = RuleChain.outerRule(retryRule)
+                .around(driverRule)
                 .around(screenshotRule);
     }
     @Override
