@@ -9,15 +9,16 @@ import org.junit.runners.model.Statement;
 /**
  * Created by Dan on 6/30/2017.
  */
-public class RetryDriverChain implements TestRule {
+public class DriverRuleChain implements TestRule {
 
     TestRule chain;
 
     @Inject
-    public RetryDriverChain(DriverRule driverRule, RetryRule retryRule)
+    public DriverRuleChain(DriverRule driverRule, RetryRule retryRule, ScreenshotRule screenshotRule)
     {
         chain = RuleChain.outerRule(driverRule)
-                .around(retryRule);
+                .around(retryRule)
+                .around(screenshotRule);
     }
     @Override
     public Statement apply(Statement statement, Description description) {

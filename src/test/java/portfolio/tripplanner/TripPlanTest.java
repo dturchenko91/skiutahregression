@@ -5,7 +5,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import portfolio.common.PortfolioJunit4Runner;
-import portfolio.common.RetryDriverChain;
+import portfolio.common.DriverRuleChain;
 
 import javax.inject.Named;
 import java.util.List;
@@ -22,7 +22,7 @@ public class TripPlanTest {
 
     @Inject
     @Rule
-    public RetryDriverChain driverAndRetryRule;
+    public DriverRuleChain ruleChain;
 
     @Inject
     private TripPlannerNavigator navigator;
