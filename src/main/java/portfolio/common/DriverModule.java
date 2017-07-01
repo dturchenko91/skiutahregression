@@ -4,6 +4,7 @@ import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 import com.google.inject.Scopes;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.UnreachableBrowserException;
 import portfolio.common.driverfactory.ChromeDriverFactory;
 import portfolio.common.driverfactory.DriverFactory;
 import portfolio.common.driverfactory.FirefoxDriverFactory;
@@ -48,8 +49,17 @@ public class DriverModule extends AbstractModule {
     @Provides
     public WebDriver getDriver(DriverFactory factory)
     {
-        WebDriver driver = factory.getDriver();
-        driver.manage().window().maximize();
-        return driver;
+        int retryAttempts = 0;
+        try
+        {
+            WebDriver driver = factory.getDriver();
+            driver.manage().window().maximize();
+            return driver;
+        }catch (UnreachableBrowserException e)
+        {
+            WebDriver driver = factory.getDriver();
+            driver.manage().window().maximize();
+            return driver;
+        }
     }
 }
