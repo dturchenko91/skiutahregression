@@ -3,8 +3,8 @@ package portfolio.home;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import portfolio.common.DriverRule;
 import portfolio.common.PortfolioJunit4Runner;
+import portfolio.common.DriverRuleChain;
 import portfolio.resorts.ResortsAndSnowPage;
 
 import javax.inject.Inject;
@@ -22,7 +22,7 @@ import static org.junit.Assert.assertTrue;
 public class HomeTest {
     @Inject
     @Rule
-    public DriverRule driverRule;
+    public DriverRuleChain retryDriverChain;
 
     @Inject
     private HomeNavigator homeNavigator;

@@ -11,6 +11,7 @@ import portfolio.common.driverfactory.DriverFactory;
  */
 public class DriverRule implements TestRule {
 
+    //The purpose of this rule is to ensure that the webdriver instance will always be closed after a test
     private DriverFactory factory;
     @Override
     public Statement apply(final Statement base, Description description) {
@@ -20,6 +21,7 @@ public class DriverRule implements TestRule {
             {
                 try
                 {
+                    factory.getDriver();
                     base.evaluate();
                 }
                 finally {
@@ -29,11 +31,13 @@ public class DriverRule implements TestRule {
         };
     }
 
+
     @Inject
     public void getFactory(DriverFactory factory)
     {
         this.factory = factory;
     }
+
 
 
 }

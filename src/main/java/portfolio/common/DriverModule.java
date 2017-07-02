@@ -4,6 +4,7 @@ import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 import com.google.inject.Scopes;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.UnreachableBrowserException;
 import portfolio.common.driverfactory.ChromeDriverFactory;
 import portfolio.common.driverfactory.DriverFactory;
 import portfolio.common.driverfactory.FirefoxDriverFactory;
@@ -19,6 +20,11 @@ public class DriverModule extends AbstractModule {
     @Override
     protected void configure()
     {
+        //this is what defines what kind of webdriver to create
+        //the driver factories are a wrapper for bonigarcia's driver manager project
+        //the driver manager that exists within the driver factory automatically downloads and installs driver binaries before tests are run
+
+        //the bound webdriverfactory is then injected into the method to provide the webdriver itself
         switch (System.getProperty("browsers"))
         {
             default:
@@ -43,8 +49,17 @@ public class DriverModule extends AbstractModule {
     @Provides
     public WebDriver getDriver(DriverFactory factory)
     {
-        WebDriver driver = factory.getDriver();
-        driver.manage().window().maximize();
-        return driver;
+        int retryAttempts = 0;
+        try
+        {
+            WebDriver driver = factory.getDriver();
+            driver.manage().window().maximize();
+            return driver;
+        }catch (UnreachableBrowserException e)
+        {
+            WebDriver driver = factory.getDriver();
+            driver.manage().window().maximize();
+            return driver;
+        }
     }
 }
