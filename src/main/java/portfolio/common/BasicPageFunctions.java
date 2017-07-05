@@ -2,10 +2,12 @@ package portfolio.common;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import portfolio.home.HomePage;
 import portfolio.resorts.ResortsAndSnowPage;
+import portfolio.search.SearchResultsPage;
 
 import javax.inject.Inject;
 import javax.inject.Provider;
@@ -24,13 +26,15 @@ public class BasicPageFunctions
 
     private Provider<HomePage> homePage;
     private Provider<ResortsAndSnowPage> resortsAndSnowPage;
+    private Provider<SearchResultsPage> searchResultsPage;
 
     @Inject
-    public BasicPageFunctions(WebDriver driver, Provider<HomePage> homePage, Provider<ResortsAndSnowPage> resortsAndSnowPage)
+    public BasicPageFunctions(WebDriver driver, Provider<HomePage> homePage, Provider<ResortsAndSnowPage> resortsAndSnowPage, Provider<SearchResultsPage> searchResultsPage)
     {
         this.driver = driver;
         this.homePage = homePage;
         this.resortsAndSnowPage = resortsAndSnowPage;
+        this.searchResultsPage = searchResultsPage;
     }
 
     public void setPageIdentifier(By pageIdentifier)
@@ -48,6 +52,22 @@ public class BasicPageFunctions
         driver.findElement(By.cssSelector("img.HeaderMain-logoImg")).click();
 
         return homePage.get();
+    }
+
+    public SearchResultsPage search(String query)
+    {
+        driver.findElement(By.cssSelector("span.i-search")).click();
+        new WebDriverWait(driver, 5)
+                .pollingEvery(100, TimeUnit.MILLISECONDS)
+                .until(visibilityOfElementLocated(By.cssSelector("input.SearchBar-searchInput")));
+
+        WebElement searchBox = driver.findElement(By.cssSelector("input.SearchBar-searchInput"));
+        searchBox.click();
+        searchBox.sendKeys(query);
+
+        driver.findElement(By.cssSelector("a[href='https://www.skiutah.com/search']")).click();
+
+        return searchResultsPage.get();
     }
 
     public ResortsAndSnowPage getResortsAndSnowPage()
