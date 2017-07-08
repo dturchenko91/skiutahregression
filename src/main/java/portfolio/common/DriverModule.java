@@ -5,10 +5,7 @@ import com.google.inject.Provides;
 import com.google.inject.Scopes;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.UnreachableBrowserException;
-import portfolio.common.driverfactory.ChromeDriverFactory;
-import portfolio.common.driverfactory.DriverFactory;
-import portfolio.common.driverfactory.FirefoxDriverFactory;
-import portfolio.common.driverfactory.PhantomJsDriverFactory;
+import portfolio.common.driverfactory.*;
 
 import javax.inject.Named;
 
@@ -36,6 +33,8 @@ public class DriverModule extends AbstractModule {
             case "firefox":
                 bind(DriverFactory.class).to(FirefoxDriverFactory.class).in(Scopes.SINGLETON);
                 break;
+            case "headless":
+                bind(DriverFactory.class).to(HeadlessChromeDriverFactory.class).in(Scopes.SINGLETON);
         }
     }
 
@@ -49,7 +48,6 @@ public class DriverModule extends AbstractModule {
     @Provides
     public WebDriver getDriver(DriverFactory factory)
     {
-        int retryAttempts = 0;
         try
         {
             WebDriver driver = factory.getDriver();

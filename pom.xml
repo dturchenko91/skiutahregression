@@ -25,7 +25,7 @@
           <parallel>classes</parallel>
           <threadCount>3</threadCount>
           <systemPropertyVariables>
-            <browsers>phantomjs</browsers>
+            <browsers>headless</browsers>
             <basepath>www.skiutah.com</basepath>
             <buildDirectory>${project.build.directory}</buildDirectory>
             [...]
